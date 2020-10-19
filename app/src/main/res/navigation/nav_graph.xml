@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/breedsListFragment">
+
+    <fragment
+        android:id="@+id/breedsListFragment"
+        android:name="com.test.breedsdogapp.ui.fragments.BreedsListFragment"
+        android:label="@string/title_main_toolbar"
+        tools:layout="@layout/fragment_breeds_list" >
+        <action
+            android:id="@+id/action_breedsListFragment_to_subBreedsListFragment"
+            app:destination="@id/subBreedsListFragment" />
+        <action
+            android:id="@+id/action_breedsListFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteListFragment"
+        android:name="com.test.breedsdogapp.ui.fragments.FavoriteListFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorite_list" >
+        <action
+            android:id="@+id/action_favoriteListFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subBreedsListFragment"
+        android:name="com.test.breedsdogapp.ui.fragments.SubBreedsListFragment"
+        android:label="{title}" >
+        <argument
+            android:name="breed"
+            app:argType="com.test.breedsdogapp.models.Breed" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_subBreedsListFragment_to_breedsListFragment"
+            app:destination="@id/breedsListFragment" />
+        <action
+            android:id="@+id/action_subBreedsListFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.test.breedsdogapp.ui.fragments.ImagesFragment"
+        android:label="{title}" >
+        <argument
+            android:name="subOrBreedImages"
+            app:argType="com.test.breedsdogapp.models.Images"/>
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_imagesFragment_to_subBreedsListFragment"
+            app:destination="@id/subBreedsListFragment" />
+        <action
+            android:id="@+id/action_imagesFragment_to_breedsListFragment"
+            app:destination="@id/breedsListFragment" />
+        <action
+            android:id="@+id/action_imagesFragment_to_favoriteListFragment"
+            app:destination="@id/favoriteListFragment" />
+    </fragment>
+</navigation>

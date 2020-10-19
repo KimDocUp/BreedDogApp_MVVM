@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BreedsDogApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header_back">Back</string>
+    <string name="header_title">Breeds</string>
+    <string name="item_list_count">(count)</string>
+    <string name="item_favorite">Favorite</string>
+    <string name="list">List</string>
+    <string name="header_title_sub">SubBreeds</string>
+    <string name="no_internet">No internet connection.</string>
+    <string name="but_update">Update</string>
+    <string name="header_title_favorite">Favorite</string>
+    <string name="txt_ok">OK</string>
+    <string name="some_server_error">Some server error</string>
+    <string name="try_connect_later">Try connect later</string>
+    <string name="loading">Loading...</string>
+    <string name="title_main_toolbar">Breeds</string>
+    <string name="title_share">Send</string>
+</resources>
